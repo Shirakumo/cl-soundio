@@ -222,7 +222,7 @@
   (ref-count :int)
   (probe-error :int))
 
-(defcstruct (out-stream :class out-stream :conc-name out-stream-)
+(defcstruct (outstream :class outstream :conc-name outstream-)
   (device :pointer)
   (format :int)
   (sample-rate :int)
@@ -238,7 +238,7 @@
   (bytes-per-sample :int)
   (layout-error :int))
 
-(defcstruct (in-stream :class in-stream :conc-name in-stream-)
+(defcstruct (instream :class instream :conc-name instream-)
   (device :pointer)
   (format :int)
   (sample-rate :int)

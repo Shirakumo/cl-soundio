@@ -211,37 +211,37 @@
    #:device-ref-count
    #:device-probe-error
 
-   #:out-stream
-   #:out-stream-device
-   #:out-stream-format
-   #:out-stream-sample-rate
-   #:out-stream-layout
-   #:out-stream-software-latency
-   #:out-stream-userdata
-   #:out-stream-write-callback
-   #:out-stream-underflow-callback
-   #:out-stream-error-callback
-   #:out-stream-name
-   #:out-stream-non-terminal-hint
-   #:out-stream-bytes-per-frame
-   #:out-stream-bytes-per-sample
-   #:out-stream-layout-error
+   #:outstream
+   #:outstream-device
+   #:outstream-format
+   #:outstream-sample-rate
+   #:outstream-layout
+   #:outstream-software-latency
+   #:outstream-userdata
+   #:outstream-write-callback
+   #:outstream-underflow-callback
+   #:outstream-error-callback
+   #:outstream-name
+   #:outstream-non-terminal-hint
+   #:outstream-bytes-per-frame
+   #:outstream-bytes-per-sample
+   #:outstream-layout-error
 
-   #:in-stream
-   #:in-stream-device
-   #:in-stream-format
-   #:in-stream-sample-rate
-   #:in-stream-layout
-   #:in-stream-software-latency
-   #:in-stream-userdata
-   #:in-stream-read-callback
-   #:in-stream-overflow-callback
-   #:in-stream-error-callback
-   #:in-stream-name
-   #:in-stream-non-terminal-hint
-   #:in-stream-bytes-per-frame
-   #:in-stream-bytes-per-sample
-   #:in-stream-layout-error
+   #:instream
+   #:instream-device
+   #:instream-format
+   #:instream-sample-rate
+   #:instream-layout
+   #:instream-software-latency
+   #:instream-userdata
+   #:instream-read-callback
+   #:instream-overflow-callback
+   #:instream-error-callback
+   #:instream-name
+   #:instream-non-terminal-hint
+   #:instream-bytes-per-frame
+   #:instream-bytes-per-sample
+   #:instream-layout-error
 
    #:ring-buffer
 
