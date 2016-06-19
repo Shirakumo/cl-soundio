@@ -177,20 +177,20 @@
 
 (defconstant soundio-max-channels 24)
 
-(defcstruct soundio-channel-layout
+(defcstruct (channel-layout :class channel-layout :conc-name channel-layout-)
   (name :string)
   (channel-count :int)
   (channels :int :count #.soundio-max-channels))
 
-(defcstruct soundio-sample-rate-range
+(defcstruct (sample-rate-change :class sample-rate-change :conc-name sample-rate-change-)
   (min :int)
   (max :int))
 
-(defcstruct soundio-channel-area
+(defcstruct (channel-area :class channel-area :conc-name channel-area-)
   (ptr :pointer)
   (step :int))
 
-(defcstruct soundio
+(defcstruct (soundio :class soundio :conc-name soundio-)
   (userdata :pointer)
   (on-devices-change :pointer)
   (on-backend-disconnect :pointer)
@@ -201,7 +201,7 @@
   (jack-info-callback :pointer)
   (jack-error-callback :pointer))
 
-(defcstruct soundio-device
+(defcstruct (device :class device :conc-name device-)
   (soundio :pointer)
   (id :string)
   (name :string)
@@ -222,11 +222,11 @@
   (ref-count :int)
   (probe-error :int))
 
-(defcstruct soundio-out-stream
+(defcstruct (out-stream :class out-stream :conc-name out-stream-)
   (device :pointer)
   (format :int)
   (sample-rate :int)
-  (layout (:struct soundio-channel-layout))
+  (layout (:struct channel-layout))
   (software-latency :double)
   (userdata :pointer)
   (write-callback :pointer)
@@ -238,11 +238,11 @@
   (bytes-per-sample :int)
   (layout-error :int))
 
-(defcstruct soundio-in-stream
+(defcstruct (in-stream :class in-stream :conc-name in-stream-)
   (device :pointer)
   (format :int)
   (sample-rate :int)
-  (layout (:struct soundio-channel-layout))
+  (layout (:struct channel-layout))
   (software-latency :double)
   (userdata :pointer)
   (read-callback :pointer)
@@ -254,7 +254,14 @@
   (bytes-per-sample :int)
   (layout-error :int))
 
-(defcstruct soundio-ring-buffer)
+(defcstruct (ring-buffer :class ring-buffer :conc-name ring-buffer-))
+
+(defmacro define-callback-func (name args &body body)
+  `(defcallback ,name :void ,args     
+     (ignore-errors
+      (with-simple-restart (abort "Abort the callback.")
+        (handler-bind ((error #'invoke-debugger))
+          ,@body)))))
 
 (defcfun (soundio-version-string "soundio_version_string") :string)
 
