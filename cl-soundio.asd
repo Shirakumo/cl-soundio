@@ -7,7 +7,7 @@
 
 (asdf:defsystem cl-soundio
   :version "1.0.0"
-  :license "Artistic"
+  :license "zlib"
   :author "Nicolas Hafner <shinmera@tymoon.eu>"
   :maintainer "Nicolas Hafner <shinmera@tymoon.eu>"
   :description "Bindings to libsoundio, providing a cross-platform, real-time audio input and output interface."
