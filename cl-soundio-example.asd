@@ -4,9 +4,9 @@
   :author "Yukari Hafner <shinmera@tymoon.eu>"
   :maintainer "Yukari Hafner <shinmera@tymoon.eu>"
   :description "The ported soundio sine example."
-  :homepage "https://Shirakumo.github.io/cl-soundio/"
-  :bug-tracker "https://github.com/Shirakumo/cl-soundio/issues"
-  :source-control (:git "https://github.com/Shirakumo/cl-soundio.git")
+  :homepage "https://shirakumo.org/docs/cl-soundio/"
+  :bug-tracker "https://shirakumo.org/project/cl-soundio/issues"
+  :source-control (:git "https://shirakumo.org/project/cl-soundio.git")
   :serial T
   :components ((:file "example"))
   :depends-on (:cl-soundio

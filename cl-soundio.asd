@@ -4,9 +4,9 @@
   :author "Yukari Hafner <shinmera@tymoon.eu>"
   :maintainer "Yukari Hafner <shinmera@tymoon.eu>"
   :description "Bindings to libsoundio, providing a cross-platform, real-time audio input and output interface."
-  :homepage "https://Shirakumo.github.io/cl-soundio/"
-  :bug-tracker "https://github.com/Shirakumo/cl-soundio/issues"
-  :source-control (:git "https://github.com/Shirakumo/cl-soundio.git")
+  :homepage "https://shirakumo.org/docs/cl-soundio/"
+  :bug-tracker "https://shirakumo.org/project/cl-soundio/issues"
+  :source-control (:git "https://shirakumo.org/project/cl-soundio.git")
   :serial T
   :components ((:file "package")
                (:file "low-level")
